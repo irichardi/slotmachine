@@ -1,0 +1,123 @@
+﻿ul#playerStats {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px;
+}
+#barsBox{
+	position:relative;
+	margin-left:10px;
+	left:40px
+}
+#barsBox > *{	
+	border:5px solid grey;
+	width:150px;
+	height:200px;
+	border-radius:5px;
+ 	border-width: 3px;   
+	margin-left:10px;
+	float:left;
+}
+#midBoxes{
+	position:relative;
+	top:10px;
+	left:65px;
+}
+#midBoxes > *{
+	width:100px;
+	height:50px;
+	float:left;	
+	margin-left:10px;
+	border:5px solid grey;
+	padding-top:10px;
+	text-align:center;
+}
+#lowBoxes{
+	position:relative;
+	top:20px;
+	left:75px;
+	width:500px;
+}
+#lowBoxes > * {
+	width:60px;
+	height:60px;
+	float:left;	
+	margin-left:10px;
+	border:5px solid grey;
+	padding-top:15px;
+	text-align:center;
+}
+#lowBoxes > *:hover{
+	background-color:red;
+}
+#gamebox{
+	position:relative;
+	width:600px;
+	height:500px;
+	border:5px solid black;
+	background-image: url('../img/body.jpg');
+	color:white;
+	left:110px;
+	top:20px;
+}
+#betEntry{
+	position:relative;
+	top:30px;
+	left:60px;
+	width:500px;
+	height:50px;
+}
+#reset:hover,#quit:hover{
+	background-color:yellow;
+	color:black;
+}
+#quit{
+	color:white;
+	background-color:red;
+	float:right;
+	padding:2px;
+}
+#jackpotGame{
+	color:#FFD700;
+	position:relative;
+	left:230px;
+	width:120px;
+	border:2px solid grey;
+	margin:5px;
+	text-align:center;
+}
+#spinButton{
+	padding:5px;
+	margin-right:10px;
+}
+h1{
+	position:relative;
+	color:white;
+	display:inline-block;
+	left:170px
+}
+h2{
+	color:white;
+}
+#win{
+	position:relative; 
+	left:230px;
+	display:inline-block;
+}
+#lost{
+	display:inline-block;
+}
+#playerBox{
+	background-image: url('../img/stat.jpg');
+	color:white;
+	position:relative;
+	width:300px;
+	height:500px;
+	left:709px;
+	top:-485px;
+}
+#result,#winOrLose{
+	padding:5px;
+}
+#winOrLose,#result>p{
+	text-align:center;
+}

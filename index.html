@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Slot Machine</title>
+    <!-- CSS Section -->
+	<link href="css/foundation.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+	
+</head>
+<body>
+    <div>
+<div id="gamebox">
+	<div id="quit">X</div>
+	<h1>Slot Machine</h1>
+	<div id="jackpotGame" class="jackpot">Jackpot: 5000</div>
+	<div id="barsBox">
+		<div id="box1"></div>
+		<div id="box2"></div>		
+		<div id="box3"></div>
+	</div>
+	<div id="midBoxes">
+		<div id="credit" class="playerMoney">1000</div>
+		<div id="bet">00</div>
+		<div id="paid">00</div>
+		<div id="reset">Reset</div>	
+	</div>
+	<div id="lowBoxes">
+		<div id="Bet10">10</div>		
+		<div id="Bet100">100</div>
+		<div id="Bet250">250</div>
+		<div id="Bet500">500</div>
+		<div id="Bet1000">1000</div>
+		<div id="BetAll">MAX</div>
+	</div>
+	<div id="betEntry">
+        <div id="spinButton" class="button">Bet Amount</div><input id="playerBet" name="points" value="10">
+	</div>
+    </div>
+	<div id="playerBox">
+        <div id="statBox">
+            <ul id="playerStats">
+				<h2>Player Statistics</h2>
+				<li id="jackpot" class="jackpot">Jackpot: 5000</li>
+                <li id="playerMoney">Player Money: 1000</li>
+                <li id="playerTurn">Turn: 0</li>
+                <li id="playerWins">Wins: 0</li>
+                <li id="playerLosses">Losses: 0</li>
+                <li id="playerWinRatio">Win Ratio: 0%</li>
+            </ul>
+        </div>
+    <div id="result">
+		<hr />
+        <h2>Spin Result</h2>
+        <p>Play</p>
+    </div>
+    <div id="winOrLose">
+        <p>Start</p>
+    </div>
+	</div>
+	</div>
+
+    <!-- JavaScript Section -->
+    <script src="js/jquery.js"></script>
+	<script src="js/mootool151.js"></script>	
+    <script src="js/main.js"></script>
+	<script>
+	</script>
+</body>
+</html>
