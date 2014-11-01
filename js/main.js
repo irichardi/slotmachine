@@ -17,6 +17,9 @@ var bars = 0;
 var bells = 0;
 var sevens = 0;
 var blanks = 0;
+var spinSound = new Audio('mp/spin.wav');
+var winSound = new Audio('mp/win.wav');
+var loseSound = new Audio('mp/lose.wav');
 
 //displays a basic output at the start.
 spinResult = Reels();
@@ -28,6 +31,7 @@ $("div#result>p").text(spinResult[0] + " - " + spinResult[1] + " - " + spinResul
 /* Utility function to show Player Stats */
 function showPlayerStats()
 {		
+	//added class to make multiple modifications
     winRatio = winNumber / turn;
     $(".jackpot").text("Jackpot: " + jackpot);
     $("#playerMoney").text("Player Money: " + playerMoney);
@@ -80,22 +84,30 @@ function checkJackPot() {
 
 /* Utility function to show a win message and increase player money */
 function showWinMessage() {
+	//included message, color change, and others
     playerMoney += winnings;
     $("div#winOrLose>p").text("You Won: $" + winnings);
 	document.getElementById("winOrLose").style.color = "green";
 	$("div#paid").text(winnings);
     resetFruitTally();
     checkJackPot();
+	winSound.play();
 }
 
 /* Utility function to show a loss message and reduce player money */
 function showLossMessage() {
+	//included message, color change, and others
     playerMoney -= playerBet;
 	jackpot  += parseInt(playerBet);
     $("div#winOrLose>p").text("You Lost!");
-	$("div#paid").text("-"+playerBet);
+	//makes sure it doesn't display number out of range
+	if(playerBet>=0 && playerBet<=9999999999){
+		$("div#paid").text("-"+playerBet);
+	}
+	//changes text color to red
 	document.getElementById("winOrLose").style.color = "red";
     resetFruitTally();
+	loseSound.play();
 }
 
 /* Utility function to check if a value falls within a range of bounds */
@@ -220,7 +232,7 @@ function determineWinnings()
 }
 //quits game
 $("#quit").click(function () {
-    window.location.href = "http://www.google.ca";
+    window.location.href = "page2.html";
 });
 //reset game
 $("#reset").click(function () {
@@ -229,6 +241,7 @@ $("#reset").click(function () {
             showPlayerStats();
         }
 });
+//bet buttons
 $("#Bet10").click(function () {
 	playerBet = 10;
 	game();
@@ -259,6 +272,7 @@ $("#spinButton").click(function () {
 	game();
 });
 function game(){
+	//included message, color change, and others(validations,etc)
 	if(playerBet>=0 && playerBet<=9999999999){
 		$("div#bet").text(playerBet);
 	}
